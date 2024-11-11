@@ -1,0 +1,207 @@
+.box{
+  .employee {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+  }
+  
+  .employee-name,
+  .employee-position,
+  .employee-department,
+  .employee-email,
+  .employee-website,
+  .employee-city,
+  .employee-street,
+  .employee-suite,
+  .employee-zipcode
+  
+  {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .employee-actions {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+ 
+  .action-btn,
+  .detail-btn {
+    background-color: #333;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-btn:hover,
+  .detail-btn:hover {
+    background-color: #000;
+  }
+
+ 
+ 
+.employee-dropdown {
+    visibility: hidden; 
+    opacity: 0;
+    background-color: #eee;
+    border-radius: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%; 
+    left: 0px; 
+    transition: opacity 0.3s ease, visibility 0s 0.3s; 
+    z-index: 100;
+    width: 100%;
+  }
+  
+
+  .employee-dropdown.show {
+    visibility: visible; 
+    opacity: 1; 
+    transition: opacity 0.3s ease, visibility 0s; 
+  }
+  
+
+
+.grid-header {
+    display: grid;
+    grid-template-columns: 3fr 2fr 4fr 3fr 2fr 2fr 2fr 2fr 2fr 1fr;
+    gap: 10px;
+    background-color: #007BFF;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.header-item {
+    text-align: center;
+    font-weight: bold;
+}
+
+ 
+ 
+
+.employee-dropdown{ }
+.employee-dropdown .dropdown-item{ padding: 0.3rem 0.6rem;}
+.employee-dropdown .dropdown-item:hover{background-color: #000; color: #fff;}
+.forMobile{display: none;}
+
+  @media (max-width: 768px) {
+    .forMobile{display: block; font-weight: bold; min-width: 100px}
+    .employee-name, .employee-position, .employee-department{display: flex;}
+    .employee-email,
+    .employee-website,
+    .employee-city,
+    .employee-street,
+    .employee-suite,
+    .employee-zipcode{display: none;}
+    .navbar-collapse{padding: 0 1rem;}
+    .nav-item .dropdown-menu{background-color: #363636;padding: 0.5rem 0.2rem;}
+    .grid-header {
+        display: none; 
+    }
+    .employee {
+      flex-direction: column; 
+      text-align: left; 
+    }
+  
+    .employee-name,
+    .employee-position,
+    .employee-department {
+      text-align: left; 
+    }
+  
+    .employee-actions {
+      text-align: center;
+      width: 100%; 
+      gap: 10px;
+    }
+  
+    .employee-actions .action-btn {
+      width: 50%; 
+    }
+  
+
+    .detail-btn {
+      display: inline-block;
+      width: 50%; 
+    }
+  }
+  
+ 
+  @media (min-width: 769px) {
+    .detail-btn {
+      display: none;  
+    }
+  
+    .employee-actions .action-btn {
+      display: inline-block; 
+      width: 100%;
+    }
+  
+    .employee {
+      display: grid;
+      grid-template-columns: 3fr 2fr 4fr 3fr 2fr 2fr 2fr 2fr 2fr 1fr;
+      gap: 10px;
+      background-color: white;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      align-items: center;
+    }
+  
+    .employee-name,
+    .employee-position,
+    .employee-department {
+      text-align: center;  
+    }
+  }
+  
+ 
+  .modal-content {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .modal-header {
+    background-color: #343a40;
+    color: white;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .modal-footer {
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+  }
+  
+  .modal-body p {
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  
+  .btn-close {
+    border: none;
+    background: none;
+    color: #343a40;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  
+}
